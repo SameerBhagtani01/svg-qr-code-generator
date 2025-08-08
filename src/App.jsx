@@ -53,7 +53,7 @@ function InputSection({ formData, handleChange }) {
             <div className="flex flex-col justify-center">
                 <label htmlFor="value">Value</label>
                 <Input
-                    className="border-2 border-black focus:border-blue-500"
+                    className="border-2 border-blue-500 transition-colors duration-200 focus:border-blue-600"
                     type="text"
                     id="value"
                     name="value"
@@ -65,7 +65,7 @@ function InputSection({ formData, handleChange }) {
             <div className="flex flex-col justify-center">
                 <label htmlFor="margin">Margin</label>
                 <Input
-                    className=""
+                    className="accent-blue-500"
                     type="range"
                     min="0"
                     max="5"
@@ -143,7 +143,7 @@ function PreviewSection({ formData }) {
             </div>
 
             <Button
-                className="rounded-md bg-blue-500 px-2 py-1 text-lg text-white"
+                className="rounded-md bg-blue-500 px-2 py-1 text-lg text-white transition-colors duration-200 hover:bg-blue-600"
                 onClick={downloadQR}
             >
                 Download
