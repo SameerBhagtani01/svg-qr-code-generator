@@ -1,6 +1,8 @@
 export default function downloadQR() {
     const el = document.getElementById("qr");
 
+    if (!el) return;
+
     const contentToDownload = el.outerHTML;
 
     const blob = new Blob([contentToDownload], { type: "image/svg+xml" });
