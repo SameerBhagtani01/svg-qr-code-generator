@@ -9,6 +9,7 @@ import downloadQR from "./utils/downloadQR";
 export default function App() {
     const [formData, setFormData] = useState({
         value: "",
+        margin: "1",
         fgcolor: "#ffffff",
         bgcolor: "#000000",
         transparent: false,
@@ -57,6 +58,21 @@ function InputSection({ formData, handleChange }) {
                     id="value"
                     name="value"
                     value={formData.value}
+                    onChange={handleChange}
+                />
+            </div>
+
+            <div className="flex flex-col justify-center">
+                <label htmlFor="margin">Margin</label>
+                <Input
+                    className=""
+                    type="range"
+                    min="0"
+                    max="5"
+                    step="1"
+                    id="margin"
+                    name="margin"
+                    value={formData.margin}
                     onChange={handleChange}
                 />
             </div>
@@ -115,8 +131,8 @@ function PreviewSection({ formData }) {
                         }
                         value={formData.value}
                         fgColor={formData.fgcolor}
-                        marginSize={1}
-                        size={180}
+                        marginSize={formData.margin}
+                        size={190}
                         id="qr"
                     />
                 ) : (
