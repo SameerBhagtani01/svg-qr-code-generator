@@ -121,7 +121,7 @@ function PreviewSection({ formData }) {
                     />
                 ) : (
                     <p className="text-center">
-                        Enter a valid URL to view the preview
+                        Enter a valid value to view the preview
                     </p>
                 )}
             </div>
